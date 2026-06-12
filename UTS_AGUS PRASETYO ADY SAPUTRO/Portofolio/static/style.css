@@ -17,10 +17,9 @@ body {
     margin: 40px 20px;
 }
 
-/* REVISI HEADER: Menggunakan Foto/Gambar Latar Belakang Asli */
 .cv-header {
     background: url('images/background.jpg') no-repeat center center; 
-    background-size: cover; /* Membuat gambar otomatis memenuhi seluruh area header */
+    background-size: cover; 
     
     padding: 30px 40px;
     display: flex;
@@ -30,12 +29,11 @@ body {
     z-index: 1;
 }
 
-/* Lapisan transparan gelap agar teks putih namamu tetap kontras dan mudah dibaca */
 .cv-header::before {
     content: "";
     position: absolute;
     top: 0; left: 0; right: 0; bottom: 0;
-    background: rgba(0, 0, 0, 0.35); /* Angka 0.35 bisa kamu naikkan jika gambar aslimu terlalu terang */
+    background: rgba(0, 0, 0, 0.35); 
     z-index: -1;
 }
 
@@ -64,7 +62,7 @@ body {
     width: 70%;
     color: #ffffff;
     padding-left: 20px;
-    position: relative; /* Menjamin teks berada di atas lapisan gelap */
+    position: relative; 
 }
 
 .subtitle {
