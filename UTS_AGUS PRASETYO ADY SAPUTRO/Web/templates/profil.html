@@ -3,56 +3,150 @@
 <head>
     {% load static %}
     <meta charset="UTF-8">
-    <title>Rencana Tahun Depan Agus</title>
-    <link rel="stylesheet" href="{% static 'style.css' %}">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biodata - Agus Prasetyo</title>
+    <!-- Query string ?v=2.6 untuk memastikan browser memuat CSS paling baru -->
+    <link rel="stylesheet" href="{% static 'style.css' %}?v=2.6">
 </head>
 <body>
-    <!-- Navbar -->
-    <nav class="navbar">
-        <div class="logo">Agus</div>
-        <ul class="nav-links">
-            <li><a href="#about">Tentang</a></li>
-            <li><a href="#projects">Proyek</a></li>
-            <li><a href="#contact">Kontak</a></li>
-        </ul>
-    </nav>
+    <div class="cv-card">
+        <header class="cv-header">
+            <div class="header-left">
+                <div class="profile-circle">
+                    <img src="{% static 'images/foto aku.jpeg' %}" alt="Agus Prasetyo">
+                </div>
+            </div>
+            <div class="header-right">
+                <p class="subtitle">BIODATA</p>
+                <h1 class="main-name">AGUS PRASETYO ADY SAPUTRO</h1>
+            </div>
+        </header>
 
-    <header>
-        <h1>Agus Prasetyo</h1>
-        <p>Python Developer | Data Analyst | Freelancer| Gamers</p>
-    </header>
+        <div class="cv-body">
+            <aside class="left-column">
+                <div class="section-title-box-left">DATA PRIBADI</div>
+                <table class="personal-table">
+                    <tr>
+                        <td><strong>Nama :</strong><br><span>Agus Prasetyo Ady Saputro</span></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Agama :</strong><br><span>Islam</span></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Negara :</strong><br><span>Indonesia</span></td>
+                    </tr>
+                    <tr>
+                        <td><strong>No Telp / HP :</strong><br><span>083106796570</span></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Email :</strong><br><span class="break-text">agusprasetyoadysaputro87@gmail.com</span></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Instagram :</strong><br><span>@Agsprstyaaa_</span></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Gituhub :</strong><br><span>Agus Prasetyo Ady Saputro</span></td>
+                    <tr>
+                </table>
 
-    <section id="about">
-        <h2>Tentang Saya</h2>
-        <p>Saya seorang developer yang fokus pada Python, Django, dan analisis data. 
-           Aktif di freelancing platform dan suka membangun solusi praktis untuk akademik maupun bisnis Danjuga masih mendalami bidang gaming.</p>
-    </section>
+                <!-- Hobi -->
+                <div class="section-title-box-left" style="margin-top: 40px;">HOBI</div>
+                <ul class="hobby-text-list">
+                    <li>Bermain Futsal</li>
+                    <li>Bermain Bola</li>
+                    <li>Mendaki</li>
+                    <li>Bermain Game</li>
+                    <li>Belajar</li>
+                </ul>
+            </aside>
 
-    <section id="projects">
-        <h2>Proyek</h2>
-        <div class="project-card">
-            <h3>Web Interaktif Django</h3>
-            <p>Aplikasi komentar real-time dengan Django dan Fetch API.</p>
+            <main class="right-column">
+                
+                <!-- Tentang Saya -->
+                <section class="main-section">
+                    <div class="section-title-box-right">TENTANG SAYA</div>
+                    <p class="desc-text">Saya seorang junior developer yang fokus pada Python, Django, dan Web Development. Saya memiliki motivasi tinggi untuk terus belajar dan mendalami bidang gaming maupun bidang olahraga.</p>
+                </section>
+
+                <!-- Riwayat Pendidikan -->
+                <section class="main-section">
+                    <div class="section-title-box-right">RIWAYAT PENDIDIKAN</div>
+                    <div class="info-row">
+                        <div class="info-left">
+                            <strong>Universitas Islam Negeri Salatiga</strong>
+                            <p>S1 - Sains Data</p>
+                        </div>
+                        <div class="info-right">: 2024 - Sekarang</div>
+                    </div>
+                    <div class="info-row">
+                        <div class="info-left">
+                            <strong>SMA Negeri 1 Tengaran</strong>
+                            <p>BAHASA</p>
+                        </div>
+                        <div class="info-right">: 2021 - 2024</div>
+                    </div>
+                    <div class="info-row">
+                        <div class="info-left">
+                            <strong>SMP Negeri 3 Tengaran</strong>
+                        </div>
+                        <div class="info-right">: 2018 - 2021</div>
+                    </div>
+                    <div class="info-row">
+                        <div class="info-left">
+                            <strong>Madrasah Ibtidaiyah Sruwen IV</strong>
+                        </div>
+                        <div class="info-right">: 2012 - 2018</div>
+                    </div>
+                </section>
+
+                <!-- Pengalaman Organisasi -->
+                <section class="main-section">
+                    <div class="section-title-box-right">PENGALAMAN ORGANISASI</div>
+                    <div class="info-row">
+                        <div class="info-left">
+                            <strong>Himpunan Mahasiswa Program Studi Sains Data</strong>
+                            <p style="font-style: italic;">Ketua Umum</p>
+                        </div>
+                        <div class="info-right">: 2025 - Sekarang</div>
+                    </div>
+                    <div class="info-row">
+                        <div class="info-left">
+                            <strong>Himpunan Mahasiswa Program Studi Sains Data</strong>
+                            <p style="font-style: italic;">Anggota Advokasi</p>
+                        </div>
+                        <div class="info-right">: 2024 - 2025</div>
+                    </div>
+                    <div class="info-row">
+                        <div class="info-left">
+                            <strong>PMII Rayon MAD</strong>
+                            <p style="font-style: italic;">Anggota Biro Kaderisasi</p>
+                        </div>
+                        <div class="info-right">: 2025 - 2026</div>
+                    </div>
+                    <div class="info-row">
+                        <div class="info-left">
+                            <strong>Karang Taruna Bina Muda</strong>
+                            <p style="font-style: italic;">Anggota HUMAS</p>
+                        </div>
+                        <div class="info-right">: 2025 - Sekarang</div>
+                    </div>
+                </section>
+
+                <!-- Keahlian -->
+                <section class="main-section">
+                    <div class="section-title-box-right">KEAHLIAN</div>
+                    <ul class="skills-bullet-list">
+                        <li><strong>PYTHON & DJANGO</strong></li>
+                        <li><strong>SPSS</strong></li>
+                        <li><strong>WEB DEV (HTML/CSS)</strong></li>
+                        <li><strong>PROBLEM SOLVING</strong></li>
+                        <li><strong>COMMUNICATION</strong></li>
+                        <li><strong>PUBLIC SPEAKING</strong></li>
+                    </ul>
+                </section>
+
+            </main>
         </div>
-        <div class="project-card">
-            <h3>Analisis Data</h3>
-            <p>Regression modeling dan visualisasi data untuk riset akademik.</p>
-        </div>
-        <div class="project-card">
-            <h3>Automation Tools</h3>
-            <p>Script Python untuk ekstraksi metadata jurnal dan format sitasi otomatis.</p>
-        </div>
-    </section>
-
-    <section id="contact">
-        <h2>Kontak</h2>
-        <p>Email: agusprasetyoadysaputro87@gmail.com</p>
-        <p>Instagram: Agsprstyaaa_</p>
-        <p>WhatsApp: 083106796570</p>
-    </section>
-
-    <footer>
-        <p>&copy; 2026 Agus Prasetyo</p>
-    </footer>
+    </div>
 </body>
 </html>

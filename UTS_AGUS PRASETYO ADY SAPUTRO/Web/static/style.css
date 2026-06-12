@@ -1,118 +1,277 @@
-html {
-    scroll-behavior: smooth;
-}
 body {
-    font-family: 'Segoe UI', sans-serif;
+    font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
-    background: #f4f4f9;
-    color: #333;
+    background-color: #cbdad5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
 }
 
-.navbar {
+.cv-card {
+    width: 100%;
+    max-width: 850px;
+    background-color: #ffffff;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+    margin: 40px 20px;
+}
+
+.cv-header {
+    background: #2cb5b1 linear-gradient(to right, rgba(44,181,177,0.4), rgba(20,130,127,0.7)); 
+    padding: 30px 40px;
+    display: flex;
+    align-items: center;
+    border-bottom: 5px solid #ffffff;
+}
+
+.header-left {
+    width: 30%;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.profile-circle {
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 4px solid #ffffff;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+.profile-circle img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.header-right {
+    width: 70%;
+    color: #ffffff;
+    padding-left: 20px;
+}
+
+.subtitle {
+    font-size: 1.1em;
+    letter-spacing: 2px;
+    margin: 0 0 5px 0;
+    font-weight: bold;
+    opacity: 0.9;
+}
+
+.main-name {
+    font-size: 1.6em;
+    margin: 0;
+    font-weight: 800;
+    letter-spacing: 1px;
+    line-height: 1.2;
+}
+
+.cv-body {
+    display: flex;
+}
+
+.left-column {
+    width: 33%;
+    background-color: #128e91; 
+    color: #ffffff;
+    padding: 30px 20px;
+    box-sizing: border-box;
+}
+
+.section-title-box-left {
+    background-color: #f3c2c2;
+    color: #333333;
+    font-weight: bold;
+    font-size: 0.9em;
+    text-align: center;
+    padding: 6px 10px;
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+    box-shadow: inset 0 -2px 0 rgba(0,0,0,0.1);
+}
+
+.personal-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.personal-table td {
+    padding: 8px 0;
+    font-size: 0.85em;
+    line-height: 1.4;
+    vertical-align: top;
+}
+
+.personal-table strong {
+    font-size: 1em;
+}
+
+.personal-table span {
+    opacity: 0.9;
+}
+
+.break-text {
+    word-break: break-all;
+}
+
+.hobby-text-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.hobby-text-list li {
+    font-size: 0.9em;
+    padding: 6px 0;
+    opacity: 0.95;
+}
+
+/* KOLOM KANAN (KONTEN PUTIH) */
+.right-column {
+    width: 67%;
+    background-color: #ffffff;
+    padding: 40px 35px;
+    box-sizing: border-box;
+}
+
+.main-section {
+    margin-bottom: 35px;
+    text-align: center; 
+}
+
+.section-title-box-right {
+    background: linear-gradient(to right, #0fa3a6, #168c8e);
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 0.95em;
+    padding: 8px 25px;
+    letter-spacing: 1.5px;
+    display: inline-block;
+    margin-bottom: 20px;
+    min-width: 250px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.desc-text {
+    font-size: 0.85em;
+    line-height: 1.7;
+    color: #555555;
+    text-align: left;
+    margin: 0;
+}
+
+.info-row {
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    background: linear-gradient(to right, #0072ff, #00c6ff);
-    padding: 15px 30px;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-}
-.navbar .logo {
-    font-size: 1.5em;
-    font-weight: bold;
-    color: white;
-}
-.navbar .nav-links {
-    list-style: none;
-    display: flex;
-    gap: 20px;
-}
-.navbar .nav-links li a {
-    color: white;
-    text-decoration: none;
-    font-weight: 500;
-    padding: 5px 10px;
-    border-radius: 4px;
-    transition: background 0.3s;
-}
-.navbar .nav-links li a:hover,
-.navbar .nav-links li a:focus {
-    background: rgba(255,255,255,0.2);
+    margin-bottom: 15px;
+    font-size: 0.85em;
+    text-align: left;
 }
 
-header {
-    background: linear-gradient(to right, #0072ff, #00c6ff);
-    color: white;
-    text-align: center;
-    padding: 80px 20px;
-}
-header h1 {
-    animation: fadeInDown 1s ease-out;
-}
-header p {
-    animation: fadeInUp 1.5s ease-out;
-}
-@keyframes fadeInDown {
-    from { opacity: 0; transform: translateY(-30px); }
-    to { opacity: 1; transform: translateY(0); }
-}
-@keyframes fadeInUp {
-    from { opacity: 0; transform: translateY(30px); }
-    to { opacity: 1; transform: translateY(0); }
+.info-left {
+    width: 65%;
 }
 
-section {
-    padding: 60px 20px;
-    max-width: 900px;
-    margin: auto;
-}
-h2 {
-    color: #0072ff;
-    margin-bottom: 20px;
+.info-left strong {
+    color: #222222;
 }
 
-.project-card {
-    background: white;
-    padding: 20px;
-    margin-bottom: 20px;
-    border-radius: 8px;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-    transition: transform 0.3s, box-shadow 0.3s;
-}
-.project-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+.info-left p {
+    margin: 2px 0 0 0;
+    color: #666666;
 }
 
-footer {
-    background: #0072ff;
-    color: white;
-    text-align: center;
-    padding: 20px;
-    font-size: 0.9em;
-    letter-spacing: 1px;
+.info-right {
+    width: 35%;
+    color: #555555;
+    text-align: right;
+    white-space: nowrap;
 }
 
-body {
-    font-family: 'Segoe UI', sans-serif;
-    margin: 0;
+/* GAYA DAFTAR POIN KEAHLIAN BARU (MENGHAPUS PROGRESS BAR) */
+.skills-bullet-list {
+    list-style: none; /* Menghilangkan bulatan bawaan browser */
     padding: 0;
-    color: #333;
-    background: linear-gradient(-45deg, #0072ff, #00c6ff, #ff9800, #ff5722);
-    background-size: 400% 400%;
-    animation: gradientBG 15s ease infinite;
+    margin: 15px 0 0 0;
+    text-align: left;
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Membagi keahlian jadi 2 kolom sejajar ke samping */
+    gap: 15px 25px; /* Jarak antar teks poin */
 }
 
-@keyframes gradientBG {
-    0% {
-        background-position: 0% 50%;
+.skills-bullet-list li {
+    font-size: 0.85em;
+    font-weight: bold;
+    color: #333333;
+    padding-left: 20px;
+    position: relative;
+    letter-spacing: 0.5px;
+    line-height: 1.4;
+}
+
+/* Membuat Poin Kustom Kotak Kecil Berwarna Toska */
+.skills-bullet-list li::before {
+    content: "■"; 
+    position: absolute;
+    left: 0;
+    color: #128e91; /* Senada dengan warna sidebar kiri */
+    font-size: 0.9em;
+    top: -1px;
+}
+
+/* MEDIA QUERY RESPONSIVE JIKA DIBUKA DI HP */
+@media (max-width: 768px) {
+    .cv-header {
+        flex-direction: column;
+        text-align: center;
+        padding: 20px;
     }
-    50% {
-        background-position: 100% 50%;
+    .header-left, .header-right {
+        width: 100%;
+        padding: 0;
     }
-    100% {
-        background-position: 0% 50%;
+    .profile-circle {
+        margin: 0 auto 15px auto;
     }
+    .cv-body {
+        flex-direction: column;
+    }
+    .left-column, .right-column {
+        width: 100%;
+    }
+    .info-row {
+        flex-direction: column;
+        gap: 2px;
+    }
+    .info-right {
+        text-align: left;
+    }
+    /* Di layar kecil, poin keahlian berderet 1 kolom ke bawah */
+    .skills-bullet-list {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+}
+
+.cv-header {
+    /* Menggunakan gambar dari folder static Django */
+    background: url('images/background.jpg') no-repeat center center; 
+    background-size: cover; /* Membuat gambar otomatis memenuhi area header */
+    padding: 30px 40px;
+    display: flex;
+    align-items: center;
+    border-bottom: 5px solid #ffffff;
+    position: relative;
+    z-index: 1;
+}
+
+/* Tambahan opsional: Memberi lapisan gelap tipis agar teks putih tetap mudah dibaca */
+.cv-header::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(0, 0, 0, 0.25); /* Angka 0.25 bisa dinaikkan jika kurang gelap */
+    z-index: -1;
 }
