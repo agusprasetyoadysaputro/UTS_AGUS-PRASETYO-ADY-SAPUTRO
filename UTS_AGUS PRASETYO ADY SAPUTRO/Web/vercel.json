@@ -2,7 +2,7 @@
   "version": 2,
   "builds": [
     {
-      "src": "Web/wsgi.py",
+      "src": "UTS_AGUS PRASETYO ADY SAPUTRO/Web/wsgi.py",
       "use": "@vercel/python",
       "config": { "maxLambdaSize": "50mb",
         "runtime": "python3.11"
@@ -20,7 +20,7 @@
     },
     {
       "src": "/(.*)",
-      "dest": "Web/wsgi.py"
+      "dest": "UTS_AGUS PRASETYO ADY SAPUTRO/Web/wsgi.py"
     }
   ]
 }
