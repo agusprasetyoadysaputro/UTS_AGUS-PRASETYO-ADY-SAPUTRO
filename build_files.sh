@@ -1,5 +1,2 @@
-#!/bin/bash
-echo " building project..."
-pip install -r requirements.txt
-manage.py collectstatic --noinput
-echo " build complete"
+pip install --break-system-packages -r requirements.txt
+python manage.py collectstatic --noinput
