@@ -28,6 +28,8 @@ DEBUG = True
 
 ALLOWED_HOSTS = ["*"]
 
+print("ALLOWED_HOSTS LOADED:", ALLOWED_HOSTS)
+
 
 # Application definition
 
@@ -121,9 +123,8 @@ STATIC_URL = 'static/'
 STATICFILES_DIRS = [BASE_DIR / 'static']
 STATIC_ROOT = BASE_DIR / 'staticfiles'
 
-STRONGERS = {
-    'staticfiles':
-        {
-            'BACKEND': 'whitenoise.storage.CompressedManifestStaticFilesStorage',
-        },
+SSTORAGES = {
+    "staticfiles": {
+        "BACKEND": "whitenoise.storage.CompressedManifestStaticFilesStorage",
+    },
 }
