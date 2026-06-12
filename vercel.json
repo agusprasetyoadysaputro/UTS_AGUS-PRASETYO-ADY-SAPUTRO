@@ -1,8 +1,26 @@
 {
-    "rewrites": [
+    "version": 2,
+    "builds": [
         {
-            "source": "/(.*)",
-            "destination": "/index.html"
+        "src": "web//wsgi.py",
+        "use": "@vercel/python"
+        },
+        {
+        "src": "static/**/*",
+        "use": "@vercel/static-build",
+        "config": {
+            "distDir": "staticfiles"
+        }
+        }
+    ],
+    "routes": [
+        {
+        "src": "/static/(.*)",
+        "dest": "/static/$1"
+        },
+        {
+        "src": "/(.*)",
+        "dest": "web/wsgi.py"
         }
     ]
 }
