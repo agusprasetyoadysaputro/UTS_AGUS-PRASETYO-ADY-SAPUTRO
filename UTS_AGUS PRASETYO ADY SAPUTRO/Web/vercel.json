@@ -2,25 +2,25 @@
   "version": 2,
   "builds": [
     {
-      "src": "UTS_AGUS PRASETYO ADY SAPUTRO/Web/wsgi.py",
-      "use": "@vercel/python",
-      "config": { "maxLambdaSize": "50mb",
-        "runtime": "python3.11"
-      }
+      "src": "Web/wsgi.py",
+      "use": "@vercel/python"
     },
-    {"src": "build_files.sh",
+    {
+      "src": "build_files.sh",
       "use": "@vercel/static-build",
-      "config": { "distDir": "staticfiles" }
+      "config": {
+        "distDir": "staticfiles"
+      }
     }
   ],
   "routes": [
     {
       "src": "/static/(.*)",
-      "dest": "staticfiles/$1"
+      "dest": "/static/$1"
     },
     {
       "src": "/(.*)",
-      "dest": "UTS_AGUS PRASETYO ADY SAPUTRO/Web/wsgi.py"
+      "dest": "Web/wsgi.py"
     }
   ]
 }
