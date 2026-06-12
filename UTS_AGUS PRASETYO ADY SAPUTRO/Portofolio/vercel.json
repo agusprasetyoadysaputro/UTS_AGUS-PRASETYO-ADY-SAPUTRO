@@ -1,20 +1,19 @@
 {
   "version": 2,
-  "buildCommand": "python manage.py collectstatic --noinput",
   "builds": [
     {
-      "src": "Web/wsgi.py",
+      "src": "Portofolio/wsgi.py",
       "use": "@vercel/python"
     }
   ],
   "routes": [
     {
       "src": "/static/(.*)",
-      "dest": "Web/wsgi.py"
+      "dest": "Portofolio/wsgi.py"
     },
     {
       "src": "/(.*)",
-      "dest": "Web/wsgi.py"
+      "dest": "Portofolio/wsgi.py"
     }
   ]
 }
