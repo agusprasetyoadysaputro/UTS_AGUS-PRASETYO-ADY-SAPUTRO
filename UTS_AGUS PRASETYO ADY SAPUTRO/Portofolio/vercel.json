@@ -10,10 +10,6 @@
     {
       "src": "/static/(.*)",
       "dest": "Portofolio/wsgi.py"
-    },
-    {
-      "src": "/(.*)",
-      "dest": "Portofolio/wsgi.py"
     }
   ]
 }
