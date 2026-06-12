@@ -4,9 +4,9 @@ from .models import Comment
 from django.views.decorators.csrf import csrf_exempt
 import json
 
-def profil(request):
+def index(request):
     comments = Comment.objects.all().order_by('-created_at')
-    return render(request, 'profil.html', {'comments': comments})
+    return render(request, 'index.html', {'comments': comments})
 
 @csrf_exempt
 def add_comment(request):

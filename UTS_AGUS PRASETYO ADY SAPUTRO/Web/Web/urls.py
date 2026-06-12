@@ -20,7 +20,7 @@ from beranda import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', views.profil, name='home'),   # root diarahkan ke profil
-    path('profil/', views.profil, name='profil'),
+    path('', views.index, name='home'),   
+    path('profil/', views.index, name='index'),
     path('add_comment/', views.add_comment, name='add_comment'),
 ]
