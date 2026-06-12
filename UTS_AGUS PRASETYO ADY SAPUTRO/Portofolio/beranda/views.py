@@ -17,3 +17,6 @@ def add_comment(request):
             message=data['message']
         )
         return JsonResponse({'id': comment.id, 'name': comment.name, 'message': comment.message})
+    
+    def beranda(request):
+        return render(request, 'beranda.html') 

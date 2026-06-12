@@ -20,7 +20,7 @@ from beranda import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', views.index, name='home'),   
-    path('profil/', views.index, name='index'),
+    path('', views.index, name='home'),
+    path('profil/', views.index, name='profil'),
     path('add_comment/', views.add_comment, name='add_comment'),
 ]
